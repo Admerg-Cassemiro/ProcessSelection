@@ -1,43 +1,37 @@
 package Fibonacci;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Fibonacci {
 
 	public static void main(String[] args) {
 		Fibo fibo = new Fibo();
 
-		Scanner scanner = new Scanner(System.in);
-
-		int limfibo = 0, vlpesq = 0;
 		boolean status = false;
+		Integer valor = Integer.parseInt(JOptionPane.showInputDialog("Valor Para Calcular Sequência:"));
 
-		System.out.println("Valor Limite Para Seq. FIBONACCI: ");
-		limfibo = scanner.nextInt();
-		scanner.nextLine();
-		int[] Valores = new int[(limfibo + 1)];
+		int[] Valores = new int[(valor + 1)];
 
-		for (int i = 1; i <= limfibo; i++) {
+		for (int i = 1; i <= valor; i++) {
 			Valores[i] = fibo.grfibo(i);
 			System.out.println(Valores[i]);
 		}
-		System.out.println("Valor Para Pesquisa na Seq. FIBONACCI: ");
-		vlpesq = scanner.nextInt();
-		scanner.nextLine();
+
 		for (int i = 0; i < Valores.length; i++) {
 			status = false;
-			if (Valores[i] == vlpesq) {
+			if (Valores[i] == valor) {
 				status = true;
 				break;
 
 			}
 		}
-		if (status)
-			System.out.printf("Valor %d Pertence a Lista FIBONACCI!", vlpesq);
-		else
-			System.out.println("Nao Pertence a Lista!");
+		if (status) {
+			JOptionPane.showMessageDialog(null, "Valor: " + valor + " Existe na Sequência!");
 
-		scanner.close();
+		} else {
+			JOptionPane.showMessageDialog(null, "Valor: " + valor + " Não Existe na Sequência!");
+
+		}
 
 	}
 
