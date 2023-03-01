@@ -1,3 +1,4 @@
+package InvertString;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -17,10 +18,9 @@ public class Inverter {
 		String palavrainv = "";
 		a = palavra.toCharArray();
 
-		for (char c : a) {
-			System.out.println(c);
-
-		}
+		//for (char c : a) {
+		//	System.out.println(c);
+	    //}
 
 		for (var i = (tamanho - 1); i >= 0; i--) {
 			palavrainv = palavrainv + a[i];
