@@ -1,11 +1,10 @@
-package selecao;
+package Fibonacci;
 
 import java.util.Scanner;
 
 public class Fibonacci {
 
 	public static void main(String[] args) {
-
 		Fibo fibo = new Fibo();
 
 		Scanner scanner = new Scanner(System.in);
@@ -30,7 +29,6 @@ public class Fibonacci {
 			if (Valores[i] == vlpesq) {
 				status = true;
 				break;
-				// System.out.printf("Valor %d Pertence a Lista FIBONACCI!", vlpesq);
 
 			}
 		}

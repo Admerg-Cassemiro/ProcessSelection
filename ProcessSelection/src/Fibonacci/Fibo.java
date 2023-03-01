@@ -1,7 +1,7 @@
-package selecao;
+package Fibonacci;
 
 public class Fibo {
-	
+
 	int grfibo(int n) {
 		if (n == 1)
 			return (0);
@@ -18,4 +18,5 @@ public class Fibo {
 		return (N);
 
 	}
+
 }
